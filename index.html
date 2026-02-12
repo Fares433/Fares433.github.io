@@ -103,7 +103,7 @@
     const message = document.getElementById("message");
 
     yesBtn.addEventListener("click", function() {
-        message.innerHTML = "LET'S GOOOO 😭💖 You just made my whole year!!! 🥰✨";
+        message.innerHTML = "LET'S GOOOO 💘 You just made my whole year!!! 🥰✨";
         createConfetti();
     });
 
@@ -114,7 +114,14 @@
         yesBtn.style.fontSize = yesSize + "px";
         noBtn.style.fontSize = noSize + "px";
 
-        message.innerHTML = "Are you sure about that? 🤨";
+const responses = [
+    "Are you really sure? 😭",
+    "Think again... 👀",
+    "That button looks suspicious 🤨",
+    "The Yes button is kinda cute tho 💖",
+    "You sure you wanna press that? 😅",
+    "Hmmmm... interesting choice 🧐"
+];
 
         if (noSize <= 5) {
             noBtn.style.display = "none";
@@ -143,3 +150,4 @@
 
 </body>
 </html>
+
