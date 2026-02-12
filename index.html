@@ -102,39 +102,43 @@
     const noBtn = document.getElementById("noBtn");
     const message = document.getElementById("message");
 
+    // Responses in order for No button
+    const responses = [
+        "Are you sure? 😔",
+        "Hmm… think again 🙂‍↕️",
+        "Are you serious?! 😡",
+        "You really don’t want to press 'No' again 😅",
+        "If you press it again, there will be a BIG surprise! 💘",
+        "Okay… this is the last warning 👀",
+        "I SAID STOP. JUST SAY YES. 😤",
+        "Grrrrr… 😾"
+    ];
+
+    let clickCount = 0;
+
     yesBtn.addEventListener("click", function() {
-        message.innerHTML = "LET'S GOOOO 💘 You just made my whole year!!! 🥰✨";
+        message.innerHTML = "LET'S GOOOO 😭💖 You just made my whole year!!! 🥰✨";
         createConfetti();
     });
 
     noBtn.addEventListener("click", function() {
+        // Grow yes button, shrink no button
         yesSize += 8;
         noSize -= 4;
 
         yesBtn.style.fontSize = yesSize + "px";
         noBtn.style.fontSize = noSize + "px";
 
-        const responses = [
-    "Are you sure? 😔",
-    "Hmm… think again 🙂‍↕️",
-    "Are you serious?! 😡",
-    "You really don’t want to press 'No' again 😅",
-    "If you press it again, there will be a BIG surprise! 💘",
-    "Okay… this is the last warning 👀",
-    "I SAID STOP. JUST SAY YES. 😤",
-    "Grrrrr… 😾"
-];
+        // Show next message in order
+        message.innerHTML = responses[clickCount % responses.length];
+        clickCount++;
 
-let clickCount = 0;
-message.innerHTML = responses[clickCount % responses.length];
-clickCount++;
-
-        
         if (noSize <= 5) {
             noBtn.style.display = "none";
         }
     });
 
+    // Confetti function
     function createConfetti() {
         for (let i = 0; i < 150; i++) {
             let confetti = document.createElement("div");
@@ -157,7 +161,3 @@ clickCount++;
 
 </body>
 </html>
-
-
-
-
