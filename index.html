@@ -114,14 +114,20 @@
         yesBtn.style.fontSize = yesSize + "px";
         noBtn.style.fontSize = noSize + "px";
 
-const responses = [
-    "Are you really sure? 😭",
-    "Think again... 👀",
-    "That button looks suspicious 🤨",
-    "The Yes button is kinda cute tho 💖",
-    "You sure you wanna press that? 😅",
-    "Hmmmm... interesting choice 🧐"
+        const responses = [
+    "Are you sure? 😔",
+    "Hmm… think again 🙂‍↕️",
+    "Are you serious?! 😡",
+    "You really don’t want to press 'No' again 😅",
+    "If you press it again, there will be a BIG surprise! 💘",
+    "Okay… this is the last warning 👀",
+    "I SAID STOP. JUST SAY YES. 😤",
+    "Grrrrr… 😾"
 ];
+
+let clickCount = 0;
+
+
 
         if (noSize <= 5) {
             noBtn.style.display = "none";
@@ -150,5 +156,6 @@ const responses = [
 
 </body>
 </html>
+
 
 
