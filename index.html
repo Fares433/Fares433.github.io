@@ -133,7 +133,8 @@
         message.innerHTML = responses[clickCount % responses.length];
         clickCount++;
 
-        if (noSize <= 5) {
+        // Only vanish at the last message
+        if (clickCount === responses.length) {
             noBtn.style.display = "none";
         }
     });
