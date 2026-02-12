@@ -126,9 +126,10 @@
 ];
 
 let clickCount = 0;
+message.innerHTML = responses[clickCount % responses.length];
+clickCount++;
 
-
-
+        
         if (noSize <= 5) {
             noBtn.style.display = "none";
         }
@@ -156,6 +157,7 @@ let clickCount = 0;
 
 </body>
 </html>
+
 
 
 
